@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/map.css">
     <title>Map</title>
 </head>
-<body>
-    
+<body onload="onInit()">
+    <h1>Map</h1>
+
+    <h2>Current Position:</h2>
+
+    <p id="locationError"></p>
+
+    <div class="map"></div>
+
+<table class="places">
+    <thead>
+        <th>lat</th>
+        <th>lng</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANkspbgGHgMn6XoVBW76AunqjYqS_d44I&loading=async&callback=mapReady"></script>
+        <script src="js/services/util.service.js"></script>
+        <script src="js/services/place.service.js"></script>
+        <script src="js/controllers/place.controller.js"></script>
 </body>
 </html>
