@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/user-prefs.css">
+    <title>User Prefs</title>
+</head>
+<body>
+    <h1>User's Settings</h1>
+    <nav>
+        <a href="index.html">Home page</a>
+        <a href="map.html">Map</a>
+    </nav>
+    <form onsubmit="onSubmit(event)">
+        <label>E-Mail <input type="email" required></label>
+        <label class="age">Age <input type="range" step="1" min="18" max="120" title="18" value="18" oninput="this.title=this.value;onInputAge(this.value)"><span>18</span></label>
+        <p>Colors:</p>
+        <label>Set Backgroud Color <input class ="bg-color" type="color"></label>
+        <label>Set Text Color <input class ="txt-color" type="color"></label>
+        <label>Birth Date <input type="date"></label>
+        <label>Birth Time <input type="time"></label>
+        <button>Set</button>
+    </form>
+
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/user.service.js"></script>
+    <script src="js/controllers/user-prefs.controller.js"></script>
+</body>
+</html>
